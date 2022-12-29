@@ -27,13 +27,14 @@ class ViewController: UIViewController {
         bannerTimer()
         setLabelSpacing()
     }
-    
+    // 2초 간격으로 자동 스크롤
     func bannerTimer(){
         let _: Timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true){
             (Timer) in self.bannerMove()
         }
     }
     
+    // nowPage에 따라 스크롤 동작
     func bannerMove(){
         nowPage += 1
         bannerCollectionView.scrollToItem(at: NSIndexPath(item: nowPage, section: 0) as IndexPath, at: .right, animated: true)

@@ -124,10 +124,11 @@
                                         <directionalEdgeInsets key="directionalLayoutMargins" top="15" leading="15" bottom="60" trailing="15"/>
                                     </stackView>
                                     <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zIw-wn-VDW">
-                                        <rect key="frame" x="0.0" y="1004" width="430" height="49"/>
+                                        <rect key="frame" x="0.0" y="697" width="430" height="49"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <items>
                                             <tabBarItem systemItem="favorites" id="cJo-3N-tyX"/>
+                                            <tabBarItem title="주문" id="H0b-oI-7n1"/>
                                             <tabBarItem systemItem="more" id="fki-oD-QdX"/>
                                         </items>
                                     </tabBar>
