@@ -14,13 +14,18 @@ class ViewController: UIViewController {
     let dataArray: Array<UIImage> = [UIImage(named: "burgerking_banner_1.png")!,UIImage(named: "burgerking_banner_2.png")!, UIImage(named: "burgerking_banner_3.png")!, UIImage(named: "burgerking_banner_1.png")!]
     
     @IBOutlet weak var bannerCollectionView: UICollectionView!
+    @IBOutlet weak var mainStackView: UIStackView!
+    @IBOutlet weak var lbl1: UILabel!
+    @IBOutlet weak var orderStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         bannerCollectionView.delegate = self
         bannerCollectionView.dataSource = self
+        bannerCollectionView.isScrollEnabled = false
         bannerTimer()
+        setLabelSpacing()
     }
     
     func bannerTimer(){
@@ -41,9 +46,16 @@ class ViewController: UIViewController {
         }
     }
     
+    //
     func scrolltoFirstIndex(){
         bannerCollectionView.scrollToItem(at: NSIndexPath(item: 0, section: 0) as IndexPath, at: .right, animated: false)
         nowPage = 0
+        
+    }
+    
+    func setLabelSpacing(){
+        mainStackView.setCustomSpacing(30, after: orderStackView)
+        mainStackView.setCustomSpacing(5, after: lbl1)
     }
 }
 
@@ -61,7 +73,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource,U
         
         cell.contentView.layer.cornerRadius = 10
         
-        
         return cell
     }
     
@@ -72,23 +83,24 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource,U
         return CGSize(width: bannerCollectionView.frame.size.width, height: bannerCollectionView.frame.size.height)
     }
     
+    // 컬렉션 뷰 내부 마진
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
 //        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
 //    }
     
-    //컬렉션뷰 감속 끝났을 때 현재 페이지 체크
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        nowPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
-        
-        switch nowPage{
-        case 0:
-            let last = dataArray.count-2
-            self.bannerCollectionView.scrollToItem(at: [0, last], at: .left, animated: false)
-        case dataArray.count-1:
-            self.bannerCollectionView.scrollToItem(at: [0,1], at: .left, animated: false)
-        default:
-            break
-        }
-    }
+    // 컬렉션뷰 감속 끝났을 때 현재 페이지 체크
+//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        nowPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+//
+//        switch nowPage{
+//        case 0:
+//            let last = dataArray.count-2
+//            self.bannerCollectionView.scrollToItem(at: [0, last], at: .left, animated: false)
+//        case dataArray.count-1:
+//            self.bannerCollectionView.scrollToItem(at: [0,1], at: .left, animated: false)
+//        default:
+//            break
+//        }
+//    }
     
 }
