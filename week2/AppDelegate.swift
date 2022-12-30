@@ -10,14 +10,39 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 //
 //        UINavigationBar.appearance().barTintColor = UIColor(red: 240/255, green: 235/255, blue: 210/255, alpha: 1)
+//        var initialViewController: UIViewController?
+//        let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        initialViewController = mainStoryboard.instantiateViewController(withIdentifier: "FirstAd")
+//        
+//                
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window?.rootViewController = initialViewController
+//        self.window?.makeKeyAndVisible()
+//
+//        UIApplication.shared.windows.first?.rootViewController?.present(initialViewController, animated: true, completion: nil)
+
         return true
     }
+    
+//    func presentInterstitial(_ sender: Any){
+//
+////        var initialViewController: UIViewController?
+//
+//        let mainStoryboard : UIStoryboard? = UIStoryboard(name: "Main", bundle: nil)
+//
+//        guard let initialViewController = mainStoryboard?.instantiateViewController(withIdentifier: "FirstAd") else {return}
+//
+//
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window?.rootViewController = initialViewController
+//        self.window?.makeKeyAndVisible()
+//    }
 
     // MARK: UISceneSession Lifecycle
 
