@@ -62,6 +62,8 @@ class ViewController: UIViewController {
     func setNavigationTitleImage(){
         let image = UIImage(named: "navi_title.png")
         let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
+        
         self.navigationItem.titleView = imageView
     }
 }

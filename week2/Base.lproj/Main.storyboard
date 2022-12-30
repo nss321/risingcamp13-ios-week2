@@ -178,21 +178,55 @@
             </objects>
             <point key="canvasLocation" x="2676.2790697674418" y="1.9313304721030045"/>
         </scene>
-        <!--메뉴-->
+        <!--Menu Page View Controller-->
         <scene sceneID="ouo-iN-d2L">
             <objects>
-                <viewController id="X7g-4h-77l" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="X7g-4h-77l" customClass="MenuPageViewController" customModule="week2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ofs-zz-bBz">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Oe-x9-rb7">
+                                <rect key="frame" x="0.0" y="103" width="430" height="746"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sEo-dY-yjY">
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="1230"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_menu" translatesAutoresizingMaskIntoConstraints="NO" id="ZI1-82-8Ft">
+                                                <rect key="frame" x="0.0" y="0.0" width="430" height="1230"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ZI1-82-8Ft" secondAttribute="height" multiplier="1080:3089" id="Sos-a5-jQ3"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.92156862745098034" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="sEo-dY-yjY" firstAttribute="top" secondItem="ld3-hI-PRu" secondAttribute="top" id="7d9-aj-ChL"/>
+                                    <constraint firstItem="sEo-dY-yjY" firstAttribute="trailing" secondItem="ld3-hI-PRu" secondAttribute="trailing" id="M8c-cD-SYS"/>
+                                    <constraint firstItem="sEo-dY-yjY" firstAttribute="bottom" secondItem="ld3-hI-PRu" secondAttribute="bottom" id="P28-fO-qv9"/>
+                                    <constraint firstItem="sEo-dY-yjY" firstAttribute="leading" secondItem="ld3-hI-PRu" secondAttribute="leading" id="gL9-yL-2UF"/>
+                                    <constraint firstItem="sEo-dY-yjY" firstAttribute="width" secondItem="Wtb-gV-xLa" secondAttribute="width" id="ret-yn-txs"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="ld3-hI-PRu"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Wtb-gV-xLa"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dVd-Cf-LMK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Oe-x9-rb7" firstAttribute="top" secondItem="dVd-Cf-LMK" secondAttribute="top" id="42O-ab-SWq"/>
+                            <constraint firstItem="dVd-Cf-LMK" firstAttribute="trailing" secondItem="2Oe-x9-rb7" secondAttribute="trailing" id="JiG-VT-QoU"/>
+                            <constraint firstItem="dVd-Cf-LMK" firstAttribute="bottom" secondItem="2Oe-x9-rb7" secondAttribute="bottom" id="mBF-xa-hJe"/>
+                            <constraint firstItem="2Oe-x9-rb7" firstAttribute="leading" secondItem="dVd-Cf-LMK" secondAttribute="leading" id="wwY-d1-Oz3"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="메뉴" id="fOt-31-XfI"/>
+                    <navigationItem key="navigationItem" id="fOt-31-XfI" customClass="MenuPageNavigation" customModule="week2" customModuleProvider="target"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qfr-VS-ZQY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3431" y="2"/>
+            <point key="canvasLocation" x="3429.7674418604652" y="1.9313304721030045"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a00-xh-3Ll">
@@ -204,9 +238,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <navigationBarAppearance key="standardAppearance">
                             <color key="backgroundColor" red="0.94117647058823528" green="0.92156862745098034" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="shadowColor" red="0.94117647058823528" green="0.92156862745098034" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         </navigationBarAppearance>
                         <navigationBarAppearance key="scrollEdgeAppearance">
                             <color key="backgroundColor" red="0.94117647058823528" green="0.92156862745098034" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="shadowColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                         </navigationBarAppearance>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -225,6 +261,7 @@
         <image name="hamburger_2" width="175" height="199"/>
         <image name="hamburger_3" width="175" height="200"/>
         <image name="login_banner" width="1006" height="248"/>
+        <image name="menu_menu" width="1080" height="3089"/>
         <image name="navi_menu" width="25" height="25"/>
         <image name="order_banner" width="491" height="211"/>
         <systemColor name="systemBackgroundColor">
