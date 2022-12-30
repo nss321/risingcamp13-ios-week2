@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		113B0437295D696800CB7C03 /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113B0436295D696800CB7C03 /* BannerCell.swift */; };
+		114654F4295F7AA8008E8D58 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114654F3295F7AA8008E8D58 /* NavigationController.swift */; };
 		11B969AB295B28A1009C73AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B969AA295B28A1009C73AF /* AppDelegate.swift */; };
 		11B969AD295B28A1009C73AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B969AC295B28A1009C73AF /* SceneDelegate.swift */; };
 		11B969AF295B28A1009C73AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B969AE295B28A1009C73AF /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		113B0436295D696800CB7C03 /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
+		114654F3295F7AA8008E8D58 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		11B969A7295B28A1009C73AF /* week2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = week2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B969AA295B28A1009C73AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11B969AC295B28A1009C73AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				11B969B5295B28A3009C73AF /* LaunchScreen.storyboard */,
 				11B969B8295B28A3009C73AF /* Info.plist */,
 				113B0436295D696800CB7C03 /* BannerCell.swift */,
+				114654F3295F7AA8008E8D58 /* NavigationController.swift */,
 			);
 			path = week2;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			files = (
 				11B969AF295B28A1009C73AF /* ViewController.swift in Sources */,
 				113B0437295D696800CB7C03 /* BannerCell.swift in Sources */,
+				114654F4295F7AA8008E8D58 /* NavigationController.swift in Sources */,
 				11B969AB295B28A1009C73AF /* AppDelegate.swift in Sources */,
 				11B969AD295B28A1009C73AF /* SceneDelegate.swift in Sources */,
 			);

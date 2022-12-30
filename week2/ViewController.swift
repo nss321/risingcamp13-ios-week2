@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setNavigationTitleImage()   
         bannerCollectionView.delegate = self
         bannerCollectionView.dataSource = self
         bannerCollectionView.isScrollEnabled = false
@@ -47,7 +48,6 @@ class ViewController: UIViewController {
         }
     }
     
-    //
     func scrolltoFirstIndex(){
         bannerCollectionView.scrollToItem(at: NSIndexPath(item: 0, section: 0) as IndexPath, at: .right, animated: false)
         nowPage = 0
@@ -58,7 +58,14 @@ class ViewController: UIViewController {
         mainStackView.setCustomSpacing(30, after: orderStackView)
         mainStackView.setCustomSpacing(5, after: lbl1)
     }
+    
+    func setNavigationTitleImage(){
+        let image = UIImage(named: "navi_title.png")
+        let imageView = UIImageView(image: image)
+        self.navigationItem.titleView = imageView
+    }
 }
+
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     // 컬렉션 뷰의 개수 설정
