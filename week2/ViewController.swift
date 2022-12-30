@@ -28,6 +28,10 @@ class ViewController: UIViewController {
         bannerCollectionView.isScrollEnabled = false
         bannerTimer()
         setLabelSpacing()
+        
+//        guard let adViewController = self.storyboard?.instantiateViewController(withIdentifier: "FirstAd") else { return }
+//        present(adViewController, animated: true)
+        presentHalfModal()
     }
     // 2초 간격으로 자동 스크롤
     func bannerTimer(){
@@ -82,11 +86,33 @@ class ViewController: UIViewController {
     }
     
     @IBAction func pushMenu(_ sender: Any) {
-            guard let uvc = self.storyboard?.instantiateViewController(withIdentifier: "MenuPage") else {
-                return
-            }
-            self.navigationController?.pushViewController(uvc, animated: true)
+            guard let MenuPageController = self.storyboard?.instantiateViewController(withIdentifier: "MenuPage") else { return }
+            self.navigationController?.pushViewController(MenuPageController, animated: true)
         }
+    
+    func presentHalfModal(){
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "FirstAd") else { return }
+        
+        vc.modalPresentationStyle = .pageSheet
+        
+        if let sheet = vc.sheetPresentationController {
+            //지원할 크기 지정
+            sheet.detents = [.medium(), .large()]
+            //크기 변하는거 감지
+//            sheet.delegate = self
+           
+            //시트 상단에 그래버 표시 (기본 값은 false)
+            sheet.prefersGrabberVisible = true
+            
+            //처음 크기 지정 (기본 값은 가장 작은 크기)
+            //sheet.selectedDetentIdentifier = .large
+            
+            //뒤 배경 흐리게 제거 (기본 값은 모든 크기에서 배경 흐리게 됨)
+            //sheet.largestUndimmedDetentIdentifier = .medium
+        }
+
+        present(vc, animated: true, completion: nil)
+    }
 }
 
 
