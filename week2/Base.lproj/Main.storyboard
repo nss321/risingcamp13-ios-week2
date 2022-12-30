@@ -131,6 +131,12 @@
                                             <tabBarItem title="주문" id="H0b-oI-7n1"/>
                                             <tabBarItem systemItem="more" id="fki-oD-QdX"/>
                                         </items>
+                                        <tabBarAppearance key="standardAppearance">
+                                            <color key="backgroundColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </tabBarAppearance>
+                                        <tabBarAppearance key="scrollEdgeAppearance">
+                                            <color key="backgroundColor" red="0.94117647058823528" green="0.92156862745098034" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </tabBarAppearance>
                                     </tabBar>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94117647058823528" green="0.92156862745098034" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
@@ -262,7 +268,7 @@
         <image name="hamburger_3" width="175" height="200"/>
         <image name="login_banner" width="1006" height="248"/>
         <image name="menu_menu" width="1080" height="3089"/>
-        <image name="navi_menu" width="25" height="25"/>
+        <image name="navi_menu" width="19" height="25"/>
         <image name="order_banner" width="491" height="211"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

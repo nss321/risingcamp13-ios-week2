@@ -21,7 +21,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        setNavigationTitleImage()   
+        setNavigationTitleImage()
+        setNavigationLeftItem()
         bannerCollectionView.delegate = self
         bannerCollectionView.dataSource = self
         bannerCollectionView.isScrollEnabled = false
@@ -66,6 +67,26 @@ class ViewController: UIViewController {
         
         self.navigationItem.titleView = imageView
     }
+    
+    func setNavigationLeftItem(){
+        let image = UIImage(named: "navi_menu.png")
+//        let imageView = UIImageView(image: image)
+//        imageView.contentMode = .scaleAspectFit
+//        let leftBarBtn = UIBarButtonItem(customView: imageView)
+        
+        let test = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(pushMenu(_:)))
+        
+        test.tintColor = .systemPink
+        
+        self.navigationItem.leftBarButtonItem = test
+    }
+    
+    @IBAction func pushMenu(_ sender: Any) {
+            guard let uvc = self.storyboard?.instantiateViewController(withIdentifier: "MenuPage") else {
+                return
+            }
+            self.navigationController?.pushViewController(uvc, animated: true)
+        }
 }
 
 
